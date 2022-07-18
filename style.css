@@ -4,13 +4,25 @@ background{
     position:relative; 
     object-fit:cover;
  }
-p2{
-   position:absolute;
-   right:8vw;
-   bottom:4vw;
-   font-size: 1.5vw;
+.overlay{
+    display: none;
 }
 
+.overlay{
+    
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:5vw;
+    right:5vw;
+    background:rgb(18, 13, 13);
+    opacity: .8;
+    background-image: url("https://s3-alpha-sig.figma.com/img/eaa5/9560/ac6ff9893d0f1b3bf49335a054f58796?Expires=1658102400&Signature=IZ5QPWCteeazZ8-n3jlmXj0iOmtrKrNW1J9hj1rs9iHM9ywuCQ88E3EGhxTJywowzOdBYw0YCjp0qA4JggyZhcQtxyje7O92Yi-zAblP8mlKJEZ2WItboeD7lvv0rPqgq-Km-3sVNG3AgMYzv5jeTLwO3zg8bpvY~8IWI4760W0E7PnJer6XXggHxdT9yRRPFTxei-n9Z6vnjGEuUCbogaIyEOj9IWalqp5~3Y9rZEsaWhM-SCEeykGOouXknV3YgVuyinhFew3sjPsxRWwJqBfdYN1-ckjKZh9xiCLeqLr0gmmEazJrlVqvK9CXQBEPhgLb8wiGbkstYj2pbOuJDQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y:20px;
+    background-size: 9vw;
+}
 body{
     font-family: 'Rufina';
     background-color: rgb(41, 37, 37);
@@ -24,7 +36,7 @@ body{
    
     width: 5vw;
     height: 5vw;
-    margin: 20px 100px 10px;
+    margin: 2vw 5vw 10px;
     cursor: pointer;
 }
 .bar{
@@ -41,10 +53,19 @@ body{
     transform: translateY(4px);
 }
 .nav li{
-    
-    padding: 15px 10;
+    margin-inline-start: auto;
+    font-style: normal;
+    font-weight: 100;
+    line-height:4vw;
+    font-size: 4vw;
+    padding:12px 10 ;
+    text-transform: uppercase;
+
 }
 .nav li a{
+    left:4vw;
+    top:1vw;
+    bottom:10vw;
     color: rgb(250, 246, 240);
     text-decoration:rgb(182, 167, 161);
 }
@@ -56,7 +77,7 @@ body{
     color:rgb(231, 36, 22);
  }
 .nav{
-    padding: 5vw;
+    padding: 7vw;
     margin: 1vw 6vw;
     transition: 0.3s ease;
     display: none;
@@ -90,30 +111,31 @@ body{
 .change #bar2{
     opacity: 0;
 }
-.change .color-overlay{
-    margin: auto;
-    position:absolute;
-    top:0px;
-    bottom:0px;
-    left:70px;
-    right:70px;
-    background:rgb(18, 13, 13);
-    opacity: .8;
-    background-image: url("https://s3-alpha-sig.figma.com/img/eaa5/9560/ac6ff9893d0f1b3bf49335a054f58796?Expires=1658102400&Signature=IZ5QPWCteeazZ8-n3jlmXj0iOmtrKrNW1J9hj1rs9iHM9ywuCQ88E3EGhxTJywowzOdBYw0YCjp0qA4JggyZhcQtxyje7O92Yi-zAblP8mlKJEZ2WItboeD7lvv0rPqgq-Km-3sVNG3AgMYzv5jeTLwO3zg8bpvY~8IWI4760W0E7PnJer6XXggHxdT9yRRPFTxei-n9Z6vnjGEuUCbogaIyEOj9IWalqp5~3Y9rZEsaWhM-SCEeykGOouXknV3YgVuyinhFew3sjPsxRWwJqBfdYN1-ckjKZh9xiCLeqLr0gmmEazJrlVqvK9CXQBEPhgLb8wiGbkstYj2pbOuJDQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y:20px;
-    background-size: 100px;
+.contact{
+    display:none;
+}
+.contact{
+    position: fixed;
+    color:rgb(234, 236, 245);
+    font-weight: 70vw;
+    list-style: none;
+}
+@media screen and (min-width:600px){
+    div.contact{
+        font-size:2vw;
+        right:6vw;
+        bottom:100px;
+    }
+}
+@media screen and (max-width:601px){
+    div.contact{
+        font-size:3vw;
+        bottom:9vw;
+        left:9vw;
+    }
 }
 .change{
-    
     display: block;
     font-family: 'Rufina';
     font-style: normal;
-    font-weight: 100vw;
-    line-height:4vw;
-    font-size: 4vw;
-    text-transform: uppercase;
-    bottom:4vw;
 }
-
